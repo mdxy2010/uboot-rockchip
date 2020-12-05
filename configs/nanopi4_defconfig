@@ -10,6 +10,8 @@ CONFIG_TARGET_NANOPI4=y
 CONFIG_DEFAULT_DEVICE_TREE="rk3399-nanopi4"
 CONFIG_DEBUG_UART=y
 CONFIG_FIT=y
+CONFIG_USE_BOOTARGS=y
+CONFIG_BOOTARGS="root=/dev/mmcblk2p8 rw rootfstype=ext4 data=/dev/mmcblk2p9 consoleblank=0 cgroup_enable=spu_set cgroup_memory=1 cgroup_enable=memory swapaccoutn=1 mtdparts=rk29xxnand:0x00002000@0x00004000(uboot),0x00002000@0x00006000(trust),0x00002000@0x00008000(misc),0x00002000@0x0000a000(dtbo),0x00008000@0x0000c000(resource),0x00014000@0x00014000(kernel),0x00018000@0x00028000(boot),0x00c7a000@0x00040000(rootfs),-@0x00cba000(userdata:grow)"
 CONFIG_SPL_LOAD_FIT=y
 CONFIG_BOOTDELAY=1
 CONFIG_SYS_CONSOLE_INFO_QUIET=y
